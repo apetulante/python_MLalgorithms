@@ -8,7 +8,7 @@ Created on Fri Jan 26 15:51:10 2018
 
 import numpy as np
 
-# Function to do standard scaling on the data. Subtracts my the mean
+# Function to do standard scaling on the data. Subtracts by the mean
 # and normalizes by variance.
 def standard_scale(X,y):
     #feature scaling
