@@ -52,3 +52,32 @@ def one_hot(X, cols):
         X = np.hstack([X[:,0:col],new_cols,X[:,col+1:]])
         cols = cols + n_vals - 1
     return X
+
+
+# Sigmoid activation function, for use with NN
+# deriv = 0/1 and corresponds to the zeroeth and first derivative
+def sigmoid(Z, deriv):
+    A = 1/(1+np.exp(-Z))
+    if deriv == 0:
+        return A
+    elif deriv == 1:
+        return A*(1-A)
+
+# ReLU activation function, for use with NN
+# deriv = 0/1 and corresponds to the zeroeth and first derivative
+def ReLU(Z, deriv):
+    A = Z.copy()
+    A[A<0] = 0
+    if deriv == 0:
+        return A
+    elif deriv == 1:
+        return np.sign(A)
+    
+# tanh activation function, for use with NN
+# deriv = 0/1 and corresponds to the zeroeth and first derivative
+def tanh(Z, deriv):
+    A = np.tanh(Z)
+    if deriv == 0:
+        return A
+    elif deriv == 1:
+        return 1-A**2
