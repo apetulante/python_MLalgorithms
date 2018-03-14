@@ -6,6 +6,12 @@ Created on Thu Feb 15 10:42:26 2018
 @author: petulaa
 """
 
+'''
+A simple set of functions to do a logistic regression using gradient descent.
+Assumes features are already scaled for both the calc and predict functions.
+Functions to scale/train-test split can be found in ML_helper.py
+'''
+
 import numpy as np
 
 def sigmoid(Z):
