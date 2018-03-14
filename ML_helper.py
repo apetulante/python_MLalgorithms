@@ -62,6 +62,7 @@ def sigmoid(Z, deriv):
         return A
     elif deriv == 1:
         return A*(1-A)
+    
 
 # ReLU activation function, for use with NN
 # deriv = 0/1 and corresponds to the zeroeth and first derivative
@@ -72,6 +73,7 @@ def ReLU(Z, deriv):
         return A
     elif deriv == 1:
         return np.sign(A)
+    
     
 # tanh activation function, for use with NN
 # deriv = 0/1 and corresponds to the zeroeth and first derivative
